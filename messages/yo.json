@@ -1,0 +1,14 @@
+
+{
+  "LandingPage": {
+    "title": "Ekaabọ si YinkCity",
+    "description": "Ilu ti o wa lori oke ko le farapamọ",
+    "emailLabel": "Imeeli",
+    "emailPlaceholder": "email@example.com",
+    "passwordLabel": "Ọrọ Aṣínà",
+    "passwordPlaceholder": "Jowo tẹ ọrọ aṣínà rẹ sii",
+    "forgotPasswordLabel": "Gbagbe ọrọ aṣínà?",
+    "forgotPasswordDesc": "Tẹ imeeli rẹ lati tun ọrọ aṣínà rẹ ṣe",
+    "loginButton": "Wọlé"
+  }
+}

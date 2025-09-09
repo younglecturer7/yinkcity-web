@@ -1,0 +1,13 @@
+{
+  "LandingPage": {
+    "title": "Welcome to YinkCity",
+    "description": "A city that set on a hill cannot be hidden",
+    "emailLabel": "Email",
+    "emailPlaceholder": "email@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Please enter your password",
+    "forgotPasswordLabel": "Forgot password?",
+    "forgotPasswordDesc": "Enter your email to reset your password",
+    "loginButton": "Login"
+  }
+}

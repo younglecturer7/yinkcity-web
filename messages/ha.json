@@ -1,0 +1,14 @@
+
+{
+  "LandingPage": {
+    "title": "Barka da zuwa YinkCity",
+    "description": "Garin da yake kan tudu ba zai iya ɓoye ba",
+    "emailLabel": "",
+    "emailPlaceholder": "",
+    "passwordLabel": "",
+    "passwordPlaceholder": "",
+    "forgotPasswordLabel": "",
+    "forgotPasswordDesc": "",
+    "loginButton": ""
+  }
+}

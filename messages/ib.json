@@ -1,0 +1,14 @@
+
+{
+  "LandingPage": {
+    "title": "",
+    "description": "",
+    "emailLabel": "",
+    "emailPlaceholder": "",
+    "passwordLabel": "",
+    "passwordPlaceholder": "",
+    "forgotPasswordLabel": "",
+    "forgotPasswordDesc": "",
+    "loginButton": ""
+  }
+}

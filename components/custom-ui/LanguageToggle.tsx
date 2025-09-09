@@ -1,14 +1,5 @@
 "use client";
 
-import {
-  Moon,
-  Sun,
-  Monitor,
-  Gift,
-  SunDim,
-  SunMoon,
-  Eclipse,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
