@@ -1,14 +1,10 @@
-
 {
-  "LandingPage": {
-    "title": "Barka da zuwa YinkCity",
-    "description": "Garin da yake kan tudu ba zai iya ɓoye ba",
-    "emailLabel": "",
-    "emailPlaceholder": "",
-    "passwordLabel": "",
-    "passwordPlaceholder": "",
-    "forgotPasswordLabel": "",
-    "forgotPasswordDesc": "",
-    "loginButton": ""
+  "landingPage": {
+    "description": "... Garin da aka kafa a kan tudu ba zai iya ɓoye ba",
+    "emailLabel": "imel",
+    "forgotPasswordLink": "manta kalmar sirri",
+    "loginButton": "Shiga",
+    "passwordLabel": "Kalmar wucewa",
+    "title": "barka da zuwa YinkCity"
   }
 }

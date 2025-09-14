@@ -11,7 +11,7 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const show = useTranslations("LandingPage");
+  const show = useTranslations("landingPage");
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -20,31 +20,31 @@ export function LoginForm({
           <form className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-2xl font-bold">{show('title')}</h1>
+                <h1 className="text-2xl font-bold capitalize">{show('title')}</h1>
                 <p className="text-muted-foreground text-balance italic text-xs">
-                  ... {show('description')}
+                  {show('description')}
                 </p>
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="email">{show('emailLabel')}</Label>
+                <Label htmlFor="email" className="capitalize">{show('emailLabel')}</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder={show('emailPlaceholder')}
+                  placeholder="email@example.com"
                   required
                 />
               </div>
               <div className="grid gap-3">
                 <div className="flex items-center">
-                  <Label htmlFor="password">{show('passwordLabel')}</Label>
+                  <Label htmlFor="password" className="capitalize">{show('passwordLabel')}</Label>
                   <a
                     href="#"
-                    className="ml-auto text-sm underline-offset-2 hover:underline"
+                    className="ml-auto text-sm capitalize underline-offset-2 hover:underline"
                   >
-                    {show('forgotPasswordLabel')}
+                    {show('forgotPasswordLink')}
                   </a>
                 </div>
-                <Input id="password" type="password" placeholder={show('passwordPlaceholder')} required />
+                <Input id="password" type="password" placeholder="********" required />
               </div>
               <Button type="submit" className="w-full">
                 {show('loginButton')}

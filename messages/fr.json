@@ -1,14 +1,10 @@
-
 {
-  "LandingPage": {
-    "title": "Bienvenue à YinkCity",
-    "description": "Une ville perchée sur une colline ne peut être cachée",
-    "emailLabel": "Email",
-    "emailPlaceholder": "email@example.com",
+  "landingPage": {
+    "description": "...une ville située sur une colline ne peut pas être cachée",
+    "emailLabel": "email",
+    "forgotPasswordLink": "mot de passe oublié",
+    "loginButton": "Connexion",
     "passwordLabel": "Mot de passe",
-    "passwordPlaceholder": "Veuillez entrer votre mot de passe",
-    "forgotPasswordLabel": "Mot de passe oublié ?",
-    "forgotPasswordDesc": "Entrez votre email pour réinitialiser votre mot de passe",
-    "loginButton": "Connexion"
+    "title": "bienvenue à YinkCity"
   }
 }

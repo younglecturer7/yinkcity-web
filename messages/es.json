@@ -1,0 +1,10 @@
+{
+  "landingPage": {
+    "description": "...una ciudad situada en una colina no puede ser escondida",
+    "emailLabel": "correo electrónico",
+    "forgotPasswordLink": "olvidé mi contraseña",
+    "loginButton": "Iniciar sesión",
+    "passwordLabel": "Contraseña",
+    "title": "bienvenido a YinkCity"
+  }
+}
