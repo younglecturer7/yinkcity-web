@@ -1,12 +1,19 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useEffect, useState } from "react";
 import { GB, FR, ES, NG } from "country-flag-icons/react/3x2";
 import { useLocale } from "next-intl";
@@ -28,14 +35,25 @@ export default function LanguageToggle() {
   const [language, setLanguage] = useState("en");
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    const lang = localStorage.getItem("lang")
+    if(!lang){
+      setLanguage('en')
+    }
+    setMounted(true)
+  }, []);
+
+  useEffect(() => {
+    const newLang = localStorage.getItem("lang")
+    setLanguage(newLang)
+  }, [language]);
+
   if (!mounted) {
     // Accessibility: render a predictable placeholder for screen readers
     return <Button variant="outline" size="icon" aria-label="Theme loading" />;
   }
 
   const switchLocale = (newLocale: string) => {
-    // console.log("new locale", newLocale)
 
     if (newLocale != locale) {
       router.replace(pathName, { locale: newLocale })
@@ -46,37 +64,30 @@ export default function LanguageToggle() {
 
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
+    <>
+      <Select
+        value={language}
+        onValueChange={(language) => switchLocale(language)}
+      >
+        <SelectTrigger className="w-fit">
+          {!language && <span className="flex items-center justify-center">
+            <GB className="mr-2 h-4 w-4" /> English 
+          </span>}
+          <SelectValue placeholder="Theme" />
+        </SelectTrigger>
+        <SelectContent>
+          {languages.map((lang) => {
+            const Icon = lang.icon;
 
-          <span className="sr-only">Toggle Language</span>
-          {language == "en" && <span className="flex"><GB title="English" className="size-5 mr-2" /> English </span>}
-          {language == "fr" && <span className="flex"><FR title="French" className="size-5 mr-2" />French</span>}
-          {language == "es" && <span className="flex"><ES title="Espanyo" className="size-5 mr-2" />Espanyo</span>}
-          {language == "yo" && <span className="flex"><NG title="Yoruba" className="size-5 mr-2" />Yoruba</span>}
-          {language == "ig" && <span className="flex"><NG title="Igbo" className="size-5 mr-2" />Igbo</span>}
-          {language == "ha" && <span className="flex"><NG title="Hausa" className="size-5 mr-2" />Hausa</span>}
-
-          {/* {language} */}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {languages.map((lang) => {
-          const Icon = lang.icon;
-          return (
-            <DropdownMenuItem
-              key={lang.value}
-              onClick={() => switchLocale(lang.value)}
-              className={language === lang.value ? "bg-accent" : ""}
-            >
-              <Icon className="mr-2 h-4 w-4" />
-              {/* <GB title={lang.name} className="size-5" /> */}
-              {lang.name}
-            </DropdownMenuItem>
-          );
-        })}
-      </DropdownMenuContent>
-    </DropdownMenu>
+            return (
+              <SelectItem key={lang.value} value={lang.value}>
+                <Icon className="mr-2 h-4 w-4" />
+                {lang.name}
+              </SelectItem>
+            );
+          })}
+        </SelectContent>
+      </Select>
+    </>
   );
 }

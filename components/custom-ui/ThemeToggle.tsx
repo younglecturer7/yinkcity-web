@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
 import { useEffect, useState } from "react";
 
 
@@ -34,6 +35,7 @@ export default function ThemeToggle() {
   }
 
   return (
+    <>
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
@@ -58,5 +60,26 @@ export default function ThemeToggle() {
         })}
       </DropdownMenuContent>
     </DropdownMenu>
+      
+      {/* <Select value={theme} onValueChange={(value) => setTheme(value)}>
+        <SelectTrigger className="w-[180px]">
+          <SelectValue placeholder="Theme" />
+        </SelectTrigger>
+        <SelectContent>
+          {themes.map((t) => {
+            const Icon = t.icon;
+            if (t.name === "light" || t.name === "dark" || t.name === "system") return null;
+            return (
+              <SelectItem key={t.name} value={t.name}>
+                <Icon className="mr-2 h-4 w-4" />
+                {t.displayName}
+              </SelectItem>
+            )
+          })}
+        </SelectContent>
+      </Select> */}
+    </>
+    
+
   );
 }
